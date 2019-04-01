@@ -78,7 +78,8 @@ public class SFSodium : NSObject {
                                       passwd: passwordBytes,
                                       salt: saltBytes,
                                       opsLimit: sodium.pwHash.OpsLimitInteractive,
-                                      memLimit: sodium.pwHash.MemLimitInteractive)
+                                      memLimit: sodium.pwHash.MemLimitInteractive,
+                                      alg: PWHash.Alg.Argon2ID13)
         
         return hash
     }
